@@ -39,3 +39,15 @@ num = "4102080860435620";
 console.log(num, isCreditCardValid(num));
 num = "4102080880435620";
 console.log(num, isCreditCardValid(num));
+
+// UI logic
+
+window.onload = function () {
+    const form = document.querySelector('form');
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        const Ipt = document.getElementById("cardInput").value;
+        const message = isCreditCardValid(Ipt);
+        document.querySelector('.valid-message').innerHTML = message;
+    }
+}
