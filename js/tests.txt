@@ -1,0 +1,46 @@
+Assumptions:
+- input: string of numbers
+- output: the method should be a string with one of two messages depending on whether or not the card number is valid
+    - true: "This card number is valid."
+    - false: "This card number is not valid."
+- string is processed before receiving if all digits
+
+Test: If the input is an empty string, then output should be false
+Code: 
+    const cardNumber = "";
+    isCreditCardValid(cardNumber)
+Expected Result: "This card number is not valid."
+
+Test: If the input is 14, result should be false
+Code: 
+    const cardNumber = "71516394042069";
+    isCreditCardValid(cardNumber)
+Expected Result: "This card number is not valid."
+
+Test: If the input is 17, result should be false
+Code: 
+    const cardNumber = "71516394042069000";
+    isCreditCardValid(cardNumber)
+Expected Result: "This card number is not valid."
+
+Test 4: If the input is a valid number, return valid statement
+Code:
+    const cardNumber = "4102080860435620";
+    isCreditCardValid(cardNumber);
+Expected result: "This card number is valid."
+
+Test 5: If the input is an invalid number, return invalid statement
+Code:
+    const cardNumber = "4102080880435620";
+    isCreditCardValid(cardNumber);
+Expected result: "This card number is not valid."
+
+valid: 4102080860435620
+invalid: 4102080880435620
+
+Checks if a number is a valid credit card number.
+@param {String} cardNumber
+@returns {String}
+function isCreditCardValid(cardNumber) {
+    return;
+}
